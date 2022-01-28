@@ -35,7 +35,7 @@ Pizza.prototype.changePrice = function () {
 		this.cost += 3;
 	} else if (this.size === 'Large') {
 		this.cost += 4;
-	} else if (this.size === 'XL') {
+	} else if (this.size === 'Family') {
 		this.cost += 5;
 	}
 };
@@ -47,5 +47,38 @@ Pizza.prototype.changeSauce = function () {
 		this.cost += 1;
 	} else if (this.sauce === 'Pesto') {
 		this.cost += 1;
+	}
+};
+
+Pizza.prototype.changeTopping = function () {
+	if (this.top1 === 'Pepperoni') {
+		this.price += 1;
+	}
+	if (this.top2 === 'Mushrooms') {
+		this.price += 1;
+	}
+	if (this.top3 === 'Sausage') {
+		this.price += 1;
+	}
+	if (this.top4 === 'Onions') {
+		this.price += 1;
+	}
+	if (this.top5 === 'Bell Peppers') {
+		this.price += 1;
+	}
+	if (this.top6 === 'Anchovies') {
+		this.price += 1;
+	}
+	if (this.top7 === 'Pineapple') {
+		this.price += 1;
+	}
+	if (this.top8 === 'Ham') {
+		this.price += 1;
+	}
+	if (this.top9 === 'Basil') {
+		this.price += 1;
+	}
+	if (this.top10 === 'Artichoke') {
+		this.price += 1;
 	}
 };
