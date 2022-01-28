@@ -99,3 +99,21 @@ function finalPizzaOrder(pizzaOrder) {
 	$('#top10').html(pizzaOrder.top10);
 	$('.cost').html(pizzaOrder.price);
 }
+
+$(document).ready(function () {
+	$('form#pizzaOrder').submit(function (event) {
+		event.preventDefault();
+		let pizzaSize = $('submit:control[name=sizeSelect]:checked').val();
+		let pizzaSauce = $('submit:control[name=sauceSelect]:checked').val();
+		let pizzaTop1 = $('input:checkbox[name=top1]:checked').val();
+		let pizzaTop2 = $('input:checkbox[name=top2]:checked').val();
+		let pizzaTop3 = $('input:checkbox[name=top3]:checked').val();
+		let pizzaTop4 = $('input:checkbox[name=top4]:checked').val();
+		let pizzaTop5 = $('input:checkbox[name=top5]:checked').val();
+		let pizzaTop6 = $('input:checkbox[name=top6]:checked').val();
+		let pizzaTop7 = $('input:checkbox[name=top7]:checked').val();
+		let pizzaTop8 = $('input:checkbox[name=top8]:checked').val();
+		let pizzaTop9 = $('input:checkbox[name=top9]:checked').val();
+		let pizzaTop10 = $('input:checkbox[name=top10]:checked').val();
+	});
+});
