@@ -1,10 +1,5 @@
-function Pizza(
-	size,
-	sauce,
-	top1,
-	top2,
-	top3,
-	top4,
+// prettier-ignore
+function Pizza(size, sauce, top1, top2, top3, top4,
 	top5,
 	top6,
 	top7,
@@ -103,8 +98,8 @@ function finalPizzaOrder(pizzaOrder) {
 $(document).ready(function () {
 	$('form#pizzaOrder').submit(function (event) {
 		event.preventDefault();
-		let pizzaSize = $('submit:control[name=sizeSelect]:checked').val();
-		let pizzaSauce = $('submit:control[name=sauceSelect]:checked').val();
+		let pizzaSize = $('select#sizeSelect').val();
+		let pizzaSauce = $('select#sauceSelect').val();
 		let pizzaTop1 = $('input:checkbox[name=top1]:checked').val();
 		let pizzaTop2 = $('input:checkbox[name=top2]:checked').val();
 		let pizzaTop3 = $('input:checkbox[name=top3]:checked').val();
@@ -115,5 +110,24 @@ $(document).ready(function () {
 		let pizzaTop8 = $('input:checkbox[name=top8]:checked').val();
 		let pizzaTop9 = $('input:checkbox[name=top9]:checked').val();
 		let pizzaTop10 = $('input:checkbox[name=top10]:checked').val();
+		let pizzaOrder = new Pizza(
+			pizzaSize,
+			pizzaSauce,
+			pizzaTop1,
+			pizzaTop2,
+			pizzaTop3,
+			pizzaTop4,
+			pizzaTop5,
+			pizzaTop6,
+			pizzaTop7,
+			pizzaTop8,
+			pizzaTop9,
+			pizzaTop10
+		);
+		pizzaOrder.changePrice();
+		console.log(pizzaOrder);
+		// $('#pizzaOrder').hide();
 	});
 });
+
+$();
